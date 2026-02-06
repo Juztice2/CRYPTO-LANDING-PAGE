@@ -1,10 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crypto Page</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    <link href="https://fonts.googleapis.com/css2?
 family=Inter:wght@300;400;500;600;700&
 family=Poppins:wght@300;400;500;600;700&
@@ -17,10 +19,29 @@ family=JetBrains+Mono:wght@400;700&
 family=Space+Mono:wght@400;700&
 display=swap" rel="stylesheet">
 </head>
-  <body>
-    <h1 class="text-red-500 text-lg justify-self-center font-poppins">Hello </h1>
-    <p class="font-jakarta">Im cool</p>
-    
-    </h1>
+  <body class="flex-shrink flex-1">
+    <!---HEADER-->
+ <header class="p-3 flex-shrink flex-1 font-inter w-[100%] overflow-hidden">
+  <!--NAV-BAR-->
+  <nav class="flex flex-shrink justify-around items-center gap-3 nav-links">
+    <div>
+      <h2 class="font-bold">Crypto<span class="text-blue-500">Z</span></h2>
+    </div>
+    <div class="hidden lg:flex">
+      <ul class="flex gap-5 cursor-pointer flex-shrink">
+        <li class="hover:text-blue-800">Products</li>
+        <li class="hover:text-blue-800">Price</li>
+        <li class="hover:text-blue-800">Support</li>
+      </ul>
+    </div>
+    <div class="flex gap-2 items-center">
+      <button class="font-bold hover:text-blue-600 active:text-gray-700">Sign In</button>
+      <button class="bg-blue-500 px-3 rounded-md py-2 text-xs text-white  hover:bg-blue-300 active:text-gray-700">Get started</button>
+    </div>
+    <div class="hamb cursor-pointer md:block lg:hidden">
+     <i class='bx bx-menu bx-md'></i>
+    </div>
+  </nav>
+ </header>
   </body>
 </html>
