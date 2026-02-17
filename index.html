@@ -43,5 +43,193 @@ display=swap" rel="stylesheet">
     </div>
   </nav>
  </header>
+
+ <!--Main-Section-->
+ <main>
+<!--Section1-->
+<section class="w-full h-auto pb-9 top-10 bg-gradient-to-br from-blue-600 to-indigo-950 justify-items-center  grid overflow-hidden  pl-6 pr-6 lg:grid-cols-2">
+  <div class=" font-mono font-semibold pt-20 justify-items-center ">
+    <h1 class="text-2xl text-white">Your all-in-one platform <br> to buy, sell, trade, and <br> earn Cryptocurrencies</h1>
+    <p class="text-xs font-poppins font-extralight mt-6 text-slate-200 flex-wrap-reverse lg:text-sm">Open a free account in minutes right from your phone and make<br> your money go futher</p>
+    <div class="mt-7 flex gap-4">
+      <input type="text" required placeholder="Email Address..." class="p-1 text-sm rounded-sm pl-4">
+      <button class="bg-blue-700 text-xs p-2 rounded-sm text-white hover:bg-blue-300 active:bg-blue-100">Get started</button>
+    </div>
+  </div>
+  <div class="w-full h-auto bg-white/20 mt-6 p-5 rounded-md font-poppins">
+  <h1 class="text-slate-200">Currency Converter</h1>
+  <p class="mt-3 text-slate-200 mb-3">Amount</p>
+  <div class="flex gap-3 items-center bg-white rounded-md">
+   <div class="relative w-64">
+
+    <!-- Selected -->
+    <div id="selectBtn"
+      class="bg-white  border-x-zinc-900 p-3 flex items-center justify-between cursor-pointer shadow ml-1">
+
+      <div class="flex items-center gap-2">
+        <img id="selectedImg"
+          src="IMAGES/btc.png"
+          class="w-5 h-5">
+
+        <span id="selectedText">Select Currency</span>
+      </div>
+
+      <span>▼</span>
+    </div>
+
+    <!-- Options -->
+    <div id="dropdown"
+      class=" w-full bg-white border rounded-lg mt-1 hidden shadow">
+
+      <div onclick="selectOption(this)"
+        data-img= "IMAGES/Frame 8764.png"
+        data-text="GBP"
+        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+
+        <img src="IMAGES/Frame 8764.png"
+          class="w-5 h-5">
+
+        GBP
+      </div>
+
+      <div onclick="selectOption(this)"
+        data-img="IMAGES/Frame 8769.png"
+        data-text="AUD"
+        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+
+        <img src="IMAGES/Frame 8769.png"
+          class="w-5 h-5">
+
+        AUD
+      </div>
+
+      <div onclick="selectOption(this)"
+        data-img="IMAGES/Frame 8765.png"
+        data-text="CAD"
+        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+
+        <img src="IMAGES/Frame 8765.png"
+          class="w-5 h-5">
+
+        CAD
+      </div>
+
+        <div onclick="selectOption(this)"
+        data-img="IMAGES/Frame 8768.png"
+        data-text="RUPEE"
+        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+
+        <img src="IMAGES/Frame 8768.png"
+          class="w-5 h-5">
+
+        RUPEE
+      </div>
+
+        <div onclick="selectOption(this)"
+        data-img="IMAGES/Frame 8767.png"
+        data-text="SWISS"
+        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+
+        <img src="IMAGES/Frame 8767.png"
+          class="w-5 h-5">
+
+        SWISS
+      </div>
+    </div>
+
+  </div>
+  <div>0.0088</div>
+  </div>
+  <p class="mt-3 text-slate-300 mb-3 text-sm">Converted to</p>
+  <div class="flex gap-3 items-center bg-white rounded-md">
+   <div class="relative w-64">
+
+    <!-- Selected -->
+    <div id="selectBtn2"
+      class="bg-white  border-x-zinc-900 p-3 flex items-center justify-between cursor-pointer shadow ml-1">
+
+      <div class="flex items-center gap-2">
+        <img id="selectedImg2"
+          src="IMAGES/btc.png"
+          class="w-5 h-5">
+
+        <span id="selectedText2">Select Currency</span>
+      </div>
+
+      <span>▼</span>
+    </div>
+
+    <!-- Options -->
+    <div id="dropdown2"
+      class=" w-full bg-white border rounded-lg mt-1 hidden shadow">
+
+      <div onclick="selectOption2(this)"
+        data-img= "IMAGES/Frame 8764.png"
+        data-text="GBP"
+        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+
+        <img src="IMAGES/Frame 8764.png"
+          class="w-5 h-5">
+
+        GBP
+      </div>
+
+      <div onclick="selectOption2(this)"
+        data-img="IMAGES/Frame 8769.png"
+        data-text="AUD"
+        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+
+        <img src="IMAGES/Frame 8769.png"
+          class="w-5 h-5">
+
+        AUD
+      </div>
+
+      <div onclick="selectOption2(this)"
+        data-img="IMAGES/Frame 8765.png"
+        data-text="CAD"
+        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+
+        <img src="IMAGES/Frame 8765.png"
+          class="w-5 h-5">
+
+        CAD
+      </div>
+
+        <div onclick="selectOption2(this)"
+        data-img="IMAGES/Frame 8768.png"
+        data-text="RUPEE"
+        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+
+        <img src="IMAGES/Frame 8768.png"
+          class="w-5 h-5">
+
+        RUPEE
+      </div>
+
+        <div onclick="selectOption2(this)"
+        data-img="IMAGES/Frame 8767.png"
+        data-text="SWISS"
+        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+
+        <img src="IMAGES/Frame 8767.png"
+          class="w-5 h-5">
+
+        SWISS
+      </div>
+    </div>
+
+  </div>
+  <div>0.0088</div>
+  </div>
+  <p class="mt-3 text-slate-300 mb-3 text-sm">Date</p>
+  <div class="flex gap-3 items-center bg-white rounded-md p-3 mt-6">
+    <input type="date" class="font-bold">
+  </div>
+  <h1 class="mt-4 text-slate-300 font-jetmono">EUR GBP BTC</h1>
+  </div>
+</section>
+ </main>
+ <script src="index.js"></script>
   </body>
 </html>
