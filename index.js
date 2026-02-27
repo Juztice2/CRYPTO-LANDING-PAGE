@@ -1,38 +1,48 @@
-const selectBtn = document.getElementById("selectBtn");
-const dropdown = document.getElementById("dropdown");
-const selectedImg = document.getElementById("selectedImg");
-const selectedText = document.getElementById("selectedText");
 
-selectBtn.onclick = () => {
-  dropdown.classList.toggle("hidden");
-};
+/* SCROLL ANIMATION */
+ const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("opacity-0", "translate-y-16");
+        entry.target.classList.add("opacity-100", "translate-y-0");
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
 
-function selectOption(element)
-{
-  const img = element.getAttribute("data-img");
-  const text = element.getAttribute("data-text");
+  document.querySelectorAll(".reveal").forEach((el) => {
+    observer.observe(el);
+  });
 
-  selectedImg.src = img;
-  selectedText.innerText = text;
+  /* CURRENCIES CONVERTER */
+ let base 
+ let counter
+  const select = document.getElementById("base-currency");
+  const counterCurrency =  document.getElementById("counter-currency")
 
-  dropdown.classList.add("hidden");
-}
-const selectBtn2 = document.getElementById("selectBtn2");
-const dropdown2 = document.getElementById("dropdown2");
-const selectedImg2 = document.getElementById("selectedImg2");
-const selectedText2 = document.getElementById("selectedText2");
+   select.addEventListener("change", function (){
+    base = this.value
+   })
+   counterCurrency.addEventListener("change", function () {
+   counter = this.value;
+   async function convertCurency() {
+    const response = await fetch(`https://v6.exchangerate-api.com/v6/fd91997063ef1d81240a8e46/latest/${base}`);
+const data = await response.json()
+console.log(data);
+let timeUpdated = data.
+time_last_update_utc;
+console.log(timeUpdated)
+let convertedTo = data.conversion_rates[counter];
+document.querySelector('.date').innerHTML = `${timeUpdated}`;
+document.querySelector('.converted-to').innerHTML = `${convertedTo.toFixed(2)}`
+  }
+  convertCurency();
+});
+ 
 
-selectBtn2.onclick = () => {
-  dropdown2.classList.toggle("hidden");
-};
 
-function selectOption2(element)
-{
-  const img = element.getAttribute("data-img");
-  const text = element.getAttribute("data-text");
 
-  selectedImg2.src = img;
-  selectedText2.innerText = text;
+ 
 
-  dropdown2.classList.add("hidden");
-}
+

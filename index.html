@@ -21,7 +21,7 @@ display=swap" rel="stylesheet">
 </head>
   <body class="flex-shrink flex-1">
     <!---HEADER-->
- <header class="p-3 flex-shrink flex-1 font-inter w-[100%] overflow-hidden ">
+ <header class="p-3 flex-shrink flex-1 font-inter w-[100%] overflow-hidden sticky top-0 bg-white shadow-md z-50">
   <!--NAV-BAR-->
   <nav class="flex flex-shrink justify-around items-center gap-3 nav-links">
     <div>
@@ -47,7 +47,7 @@ display=swap" rel="stylesheet">
  <!--Main-Section-->
  <main>
 <!--Section1-->
-<section class="w-full h-auto pb-9 top-10 bg-gradient-to-br from-blue-600 to-indigo-950 justify-center  grid overflow-hidden  pl-6 pr-6 shrink lg:grid-cols-2">
+<section class="ml-5 mr-5 reveal opacity-0 translate-y-16 transition-all duration-700 ease-out h-auto pb-9 top-10 bg-gradient-to-br from-blue-600 to-indigo-950 justify-center grid overflow-hidden  pl-6 pr-6 lg:grid-cols-2 ">
   <div class=" font-mono font-semibold pt-20 justify-items-center ">
     <h1 class="text-2xl text-white">Your all-in-one platform <br> to buy, sell, trade, and <br> earn Cryptocurrencies</h1>
     <p class="text-xs font-poppins font-extralight mt-6 text-slate-200 flex-wrap-reverse lg:text-sm">Open a free account in minutes right from your phone and make<br> your money go futher</p>
@@ -59,178 +59,272 @@ display=swap" rel="stylesheet">
   <div class="w-full h-auto bg-white/20 mt-6 p-5 rounded-md font-poppins">
   <h1 class="text-slate-200">Currency Converter</h1>
   <p class="mt-3 text-slate-200 mb-3">Amount</p>
-  <div class="flex gap-3 items-center bg-white rounded-md">
-   <div class="relative w-64">
+ <div class="bg-white flex rounded-lg items-center justify-around gap-4 p-4">
+  <select name="currency" id="base-currency" class="border-0 outline-none focus:outline-none">
 
-    <!-- Selected -->
-    <div id="selectBtn"
-      class="bg-white  border-x-zinc-900 p-3 flex items-center justify-between cursor-pointer shadow ml-1">
+  <option value="USD">Select-Currency</option>
+  <option value="USD">USD - US Dollar</option>
+  <option value="EUR">EUR - Euro</option>
+  <option value="GBP">GBP - British Pound</option>
+  <option value="NGN">NGN - Nigerian Naira</option>
+  <option value="JPY">JPY - Japanese Yen</option>
+  <option value="AUD">AUD - Australian Dollar</option>
+  <option value="CAD">CAD - Canadian Dollar</option>
+  <option value="CHF">CHF - Swiss Franc</option>
+  <option value="CNY">CNY - Chinese Yuan</option>
+  <option value="INR">INR - Indian Rupee</option>
 
-      <div class="flex items-center gap-2">
-        <img id="selectedImg"
-          src="IMAGES/btc.png"
-          class="w-5 h-5">
+  <option value="AED">AED - UAE Dirham</option>
+  <option value="AFN">AFN - Afghan Afghani</option>
+  <option value="ALL">ALL - Albanian Lek</option>
+  <option value="AMD">AMD - Armenian Dram</option>
+  <option value="ANG">ANG - Netherlands Antillean Guilder</option>
+  <option value="AOA">AOA - Angolan Kwanza</option>
+  <option value="ARS">ARS - Argentine Peso</option>
+  <option value="AWG">AWG - Aruban Florin</option>
+  <option value="AZN">AZN - Azerbaijani Manat</option>
 
-        <span id="selectedText">Select Currency</span>
-      </div>
+  <option value="BAM">BAM - Bosnia-Herzegovina Mark</option>
+  <option value="BBD">BBD - Barbadian Dollar</option>
+  <option value="BDT">BDT - Bangladeshi Taka</option>
+  <option value="BGN">BGN - Bulgarian Lev</option>
+  <option value="BHD">BHD - Bahraini Dinar</option>
+  <option value="BIF">BIF - Burundian Franc</option>
+  <option value="BMD">BMD - Bermudian Dollar</option>
+  <option value="BND">BND - Brunei Dollar</option>
+  <option value="BOB">BOB - Bolivian Boliviano</option>
+  <option value="BRL">BRL - Brazilian Real</option>
+  <option value="BSD">BSD - Bahamian Dollar</option>
+  <option value="BTN">BTN - Bhutanese Ngultrum</option>
+  <option value="BWP">BWP - Botswana Pula</option>
+  <option value="BYN">BYN - Belarusian Ruble</option>
+  <option value="BZD">BZD - Belize Dollar</option>
 
-      <span>▼</span>
-    </div>
+  <option value="CLP">CLP - Chilean Peso</option>
+  <option value="COP">COP - Colombian Peso</option>
+  <option value="CRC">CRC - Costa Rican Colón</option>
+  <option value="CUP">CUP - Cuban Peso</option>
+  <option value="CZK">CZK - Czech Koruna</option>
 
-    <!-- Options -->
-    <div id="dropdown"
-      class=" w-full bg-white border rounded-lg mt-1 hidden shadow">
+  <option value="DKK">DKK - Danish Krone</option>
+  <option value="DOP">DOP - Dominican Peso</option>
+  <option value="DZD">DZD - Algerian Dinar</option>
 
-      <div onclick="selectOption(this)"
-        data-img= "IMAGES/Frame 8764.png"
-        data-text="GBP"
-        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+  <option value="EGP">EGP - Egyptian Pound</option>
+  <option value="ETB">ETB - Ethiopian Birr</option>
 
-        <img src="IMAGES/Frame 8764.png"
-          class="w-5 h-5">
+  <option value="FJD">FJD - Fijian Dollar</option>
 
-        GBP
-      </div>
+  <option value="GEL">GEL - Georgian Lari</option>
+  <option value="GHS">GHS - Ghanaian Cedi</option>
+  <option value="GMD">GMD - Gambian Dalasi</option>
+  <option value="GTQ">GTQ - Guatemalan Quetzal</option>
+  <option value="GYD">GYD - Guyanese Dollar</option>
 
-      <div onclick="selectOption(this)"
-        data-img="IMAGES/Frame 8769.png"
-        data-text="AUD"
-        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+  <option value="HKD">HKD - Hong Kong Dollar</option>
+  <option value="HNL">HNL - Honduran Lempira</option>
+  <option value="HRK">HRK - Croatian Kuna</option>
+  <option value="HUF">HUF - Hungarian Forint</option>
 
-        <img src="IMAGES/Frame 8769.png"
-          class="w-5 h-5">
+  <option value="IDR">IDR - Indonesian Rupiah</option>
+  <option value="ILS">ILS - Israeli New Shekel</option>
+  <option value="IQD">IQD - Iraqi Dinar</option>
+  <option value="IRR">IRR - Iranian Rial</option>
+  <option value="ISK">ISK - Icelandic Króna</option>
 
-        AUD
-      </div>
+  <option value="JMD">JMD - Jamaican Dollar</option>
+  <option value="JOD">JOD - Jordanian Dinar</option>
 
-      <div onclick="selectOption(this)"
-        data-img="IMAGES/Frame 8765.png"
-        data-text="CAD"
-        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+  <option value="KES">KES - Kenyan Shilling</option>
+  <option value="KHR">KHR - Cambodian Riel</option>
+  <option value="KRW">KRW - South Korean Won</option>
+  <option value="KWD">KWD - Kuwaiti Dinar</option>
+  <option value="KZT">KZT - Kazakhstani Tenge</option>
 
-        <img src="IMAGES/Frame 8765.png"
-          class="w-5 h-5">
+  <option value="LAK">LAK - Lao Kip</option>
+  <option value="LBP">LBP - Lebanese Pound</option>
+  <option value="LKR">LKR - Sri Lankan Rupee</option>
+  <option value="MAD">MAD - Moroccan Dirham</option>
+  <option value="MDL">MDL - Moldovan Leu</option>
+  <option value="MGA">MGA - Malagasy Ariary</option>
+  <option value="MKD">MKD - Macedonian Denar</option>
+  <option value="MMK">MMK - Myanmar Kyat</option>
+  <option value="MNT">MNT - Mongolian Tögrög</option>
+  <option value="MUR">MUR - Mauritian Rupee</option>
+  <option value="MXN">MXN - Mexican Peso</option>
+  <option value="MYR">MYR - Malaysian Ringgit</option>
+  <option value="MZN">MZN - Mozambican Metical</option>
 
-        CAD
-      </div>
+  <option value="NAD">NAD - Namibian Dollar</option>
+  <option value="NPR">NPR - Nepalese Rupee</option>
+  <option value="NZD">NZD - New Zealand Dollar</option>
 
-        <div onclick="selectOption(this)"
-        data-img="IMAGES/Frame 8768.png"
-        data-text="RUPEE"
-        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+  <option value="OMR">OMR - Omani Rial</option>
 
-        <img src="IMAGES/Frame 8768.png"
-          class="w-5 h-5">
+  <option value="PEN">PEN - Peruvian Sol</option>
+  <option value="PHP">PHP - Philippine Peso</option>
+  <option value="PKR">PKR - Pakistani Rupee</option>
+  <option value="PLN">PLN - Polish Złoty</option>
 
-        RUPEE
-      </div>
+  <option value="QAR">QAR - Qatari Riyal</option>
 
-        <div onclick="selectOption(this)"
-        data-img="IMAGES/Frame 8767.png"
-        data-text="SWISS"
-        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+  <option value="RON">RON - Romanian Leu</option>
+  <option value="RSD">RSD - Serbian Dinar</option>
+  <option value="RUB">RUB - Russian Ruble</option>
+  <option value="SAR">SAR - Saudi Riyal</option>
+  <option value="SEK">SEK - Swedish Krona</option>
+  <option value="SGD">SGD - Singapore Dollar</option>
+  <option value="THB">THB - Thai Baht</option>
+  <option value="TRY">TRY - Turkish Lira</option>
+  <option value="TWD">TWD - Taiwan Dollar</option>
+  <option value="UAH">UAH - Ukrainian Hryvnia</option>
+  <option value="UGX">UGX - Ugandan Shilling</option>
+  <option value="UYU">UYU - Uruguayan Peso</option>
+  <option value="UZS">UZS - Uzbekistani Som</option>
+  <option value="VND">VND - Vietnamese Dong</option>
+  <option value="ZAR">ZAR - South African Rand</option>
+  <option value="ZMW">ZMW - Zambian Kwacha</option>
 
-        <img src="IMAGES/Frame 8767.png"
-          class="w-5 h-5">
+</select>
+  <p>1</p>
+ </div>
+  <p class="mt-3 text-slate-200 mb-3 text-sm">Converted to</p>
+  <div class="bg-white flex rounded-lg items-center justify-around gap-4 p-4">
+  <select name="currency" id="counter-currency" class="border-0 outline-none focus:outline-none">
 
-        SWISS
-      </div>
-    </div>
+  <option value="USD">Select-Currency</option>
+  <option value="USD">USD - US Dollar</option>
+  <option value="EUR">EUR - Euro</option>
+  <option value="GBP">GBP - British Pound</option>
+  <option value="NGN">NGN - Nigerian Naira</option>
+  <option value="JPY">JPY - Japanese Yen</option>
+  <option value="AUD">AUD - Australian Dollar</option>
+  <option value="CAD">CAD - Canadian Dollar</option>
+  <option value="CHF">CHF - Swiss Franc</option>
+  <option value="CNY">CNY - Chinese Yuan</option>
+  <option value="INR">INR - Indian Rupee</option>
 
-  </div>
-  <div>0.0088</div>
-  </div>
-  <p class="mt-3 text-slate-300 mb-3 text-sm">Converted to</p>
-  <div class="flex gap-3 items-center bg-white rounded-md">
-   <div class="relative w-64">
+  <option value="AED">AED - UAE Dirham</option>
+  <option value="AFN">AFN - Afghan Afghani</option>
+  <option value="ALL">ALL - Albanian Lek</option>
+  <option value="AMD">AMD - Armenian Dram</option>
+  <option value="ANG">ANG - Netherlands Antillean Guilder</option>
+  <option value="AOA">AOA - Angolan Kwanza</option>
+  <option value="ARS">ARS - Argentine Peso</option>
+  <option value="AWG">AWG - Aruban Florin</option>
+  <option value="AZN">AZN - Azerbaijani Manat</option>
 
-    <!-- Selected -->
-    <div id="selectBtn2"
-      class="bg-white  border-x-zinc-900 p-3 flex items-center justify-between cursor-pointer shadow ml-1">
+  <option value="BAM">BAM - Bosnia-Herzegovina Mark</option>
+  <option value="BBD">BBD - Barbadian Dollar</option>
+  <option value="BDT">BDT - Bangladeshi Taka</option>
+  <option value="BGN">BGN - Bulgarian Lev</option>
+  <option value="BHD">BHD - Bahraini Dinar</option>
+  <option value="BIF">BIF - Burundian Franc</option>
+  <option value="BMD">BMD - Bermudian Dollar</option>
+  <option value="BND">BND - Brunei Dollar</option>
+  <option value="BOB">BOB - Bolivian Boliviano</option>
+  <option value="BRL">BRL - Brazilian Real</option>
+  <option value="BSD">BSD - Bahamian Dollar</option>
+  <option value="BTN">BTN - Bhutanese Ngultrum</option>
+  <option value="BWP">BWP - Botswana Pula</option>
+  <option value="BYN">BYN - Belarusian Ruble</option>
+  <option value="BZD">BZD - Belize Dollar</option>
 
-      <div class="flex items-center gap-2">
-        <img id="selectedImg2"
-          src="IMAGES/btc.png"
-          class="w-5 h-5">
+  <option value="CLP">CLP - Chilean Peso</option>
+  <option value="COP">COP - Colombian Peso</option>
+  <option value="CRC">CRC - Costa Rican Colón</option>
+  <option value="CUP">CUP - Cuban Peso</option>
+  <option value="CZK">CZK - Czech Koruna</option>
 
-        <span id="selectedText2">Select Currency</span>
-      </div>
+  <option value="DKK">DKK - Danish Krone</option>
+  <option value="DOP">DOP - Dominican Peso</option>
+  <option value="DZD">DZD - Algerian Dinar</option>
 
-      <span>▼</span>
-    </div>
+  <option value="EGP">EGP - Egyptian Pound</option>
+  <option value="ETB">ETB - Ethiopian Birr</option>
 
-    <!-- Options -->
-    <div id="dropdown2"
-      class=" w-full bg-white border rounded-lg mt-1 hidden shadow">
+  <option value="FJD">FJD - Fijian Dollar</option>
 
-      <div onclick="selectOption2(this)"
-        data-img= "IMAGES/Frame 8764.png"
-        data-text="GBP"
-        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+  <option value="GEL">GEL - Georgian Lari</option>
+  <option value="GHS">GHS - Ghanaian Cedi</option>
+  <option value="GMD">GMD - Gambian Dalasi</option>
+  <option value="GTQ">GTQ - Guatemalan Quetzal</option>
+  <option value="GYD">GYD - Guyanese Dollar</option>
 
-        <img src="IMAGES/Frame 8764.png"
-          class="w-5 h-5">
+  <option value="HKD">HKD - Hong Kong Dollar</option>
+  <option value="HNL">HNL - Honduran Lempira</option>
+  <option value="HRK">HRK - Croatian Kuna</option>
+  <option value="HUF">HUF - Hungarian Forint</option>
 
-        GBP
-      </div>
+  <option value="IDR">IDR - Indonesian Rupiah</option>
+  <option value="ILS">ILS - Israeli New Shekel</option>
+  <option value="IQD">IQD - Iraqi Dinar</option>
+  <option value="IRR">IRR - Iranian Rial</option>
+  <option value="ISK">ISK - Icelandic Króna</option>
 
-      <div onclick="selectOption2(this)"
-        data-img="IMAGES/Frame 8769.png"
-        data-text="AUD"
-        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+  <option value="JMD">JMD - Jamaican Dollar</option>
+  <option value="JOD">JOD - Jordanian Dinar</option>
 
-        <img src="IMAGES/Frame 8769.png"
-          class="w-5 h-5">
+  <option value="KES">KES - Kenyan Shilling</option>
+  <option value="KHR">KHR - Cambodian Riel</option>
+  <option value="KRW">KRW - South Korean Won</option>
+  <option value="KWD">KWD - Kuwaiti Dinar</option>
+  <option value="KZT">KZT - Kazakhstani Tenge</option>
 
-        AUD
-      </div>
+  <option value="LAK">LAK - Lao Kip</option>
+  <option value="LBP">LBP - Lebanese Pound</option>
+  <option value="LKR">LKR - Sri Lankan Rupee</option>
+  <option value="MAD">MAD - Moroccan Dirham</option>
+  <option value="MDL">MDL - Moldovan Leu</option>
+  <option value="MGA">MGA - Malagasy Ariary</option>
+  <option value="MKD">MKD - Macedonian Denar</option>
+  <option value="MMK">MMK - Myanmar Kyat</option>
+  <option value="MNT">MNT - Mongolian Tögrög</option>
+  <option value="MUR">MUR - Mauritian Rupee</option>
+  <option value="MXN">MXN - Mexican Peso</option>
+  <option value="MYR">MYR - Malaysian Ringgit</option>
+  <option value="MZN">MZN - Mozambican Metical</option>
 
-      <div onclick="selectOption2(this)"
-        data-img="IMAGES/Frame 8765.png"
-        data-text="CAD"
-        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+  <option value="NAD">NAD - Namibian Dollar</option>
+  <option value="NPR">NPR - Nepalese Rupee</option>
+  <option value="NZD">NZD - New Zealand Dollar</option>
 
-        <img src="IMAGES/Frame 8765.png"
-          class="w-5 h-5">
+  <option value="OMR">OMR - Omani Rial</option>
 
-        CAD
-      </div>
+  <option value="PEN">PEN - Peruvian Sol</option>
+  <option value="PHP">PHP - Philippine Peso</option>
+  <option value="PKR">PKR - Pakistani Rupee</option>
+  <option value="PLN">PLN - Polish Złoty</option>
 
-        <div onclick="selectOption2(this)"
-        data-img="IMAGES/Frame 8768.png"
-        data-text="RUPEE"
-        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
+  <option value="QAR">QAR - Qatari Riyal</option>
 
-        <img src="IMAGES/Frame 8768.png"
-          class="w-5 h-5">
+  <option value="RON">RON - Romanian Leu</option>
+  <option value="RSD">RSD - Serbian Dinar</option>
+  <option value="RUB">RUB - Russian Ruble</option>
+  <option value="SAR">SAR - Saudi Riyal</option>
+  <option value="SEK">SEK - Swedish Krona</option>
+  <option value="SGD">SGD - Singapore Dollar</option>
+  <option value="THB">THB - Thai Baht</option>
+  <option value="TRY">TRY - Turkish Lira</option>
+  <option value="TWD">TWD - Taiwan Dollar</option>
+  <option value="UAH">UAH - Ukrainian Hryvnia</option>
+  <option value="UGX">UGX - Ugandan Shilling</option>
+  <option value="UYU">UYU - Uruguayan Peso</option>
+  <option value="UZS">UZS - Uzbekistani Som</option>
+  <option value="VND">VND - Vietnamese Dong</option>
+  <option value="ZAR">ZAR - South African Rand</option>
+  <option value="ZMW">ZMW - Zambian Kwacha</option>
 
-        RUPEE
-      </div>
-
-        <div onclick="selectOption2(this)"
-        data-img="IMAGES/Frame 8767.png"
-        data-text="SWISS"
-        class="flex items-center gap-2 p-3 hover:bg-gray-100 cursor-pointer">
-
-        <img src="IMAGES/Frame 8767.png"
-          class="w-5 h-5">
-
-        SWISS
-      </div>
-    </div>
-
-  </div>
-  <div>0.0088</div>
-  </div>
-  <p class="mt-3 text-slate-300 mb-3 text-sm">Date</p>
-  <div class="flex gap-3 items-center bg-white rounded-md p-3 mt-6">
-    <input type="date" class="font-bold">
-  </div>
-  <h1 class="mt-4 text-slate-300 font-jetmono">EUR GBP BTC</h1>
-  </div>
+</select>
+  <p class="converted-to">1</p>
+ </div>
+ <p class="mt-3 text-slate-200 mb-3 text-sm">Date</p>
+ <div  class="date bg-white flex rounded-lg items-center justify-between gap-5 p-5 w-full">27-2-2026</div>
+ <p class="mt-3 text-slate-200 mb-3 text-sm">EUR GBP BTC</p>
+ </div>
 </section>
 
-<div class="mt-5 p-5 flex justify-around overflow-hidden items-center">
+<div class="reveal opacity-0 translate-y-16 transition-all duration-700 ease-out  mt-5 p-5 flex justify-around overflow-hidden items-center">
   <img 
     src="https://upload.wikimedia.org/wikipedia/commons/1/12/Binance_logo.svg"
     class="w-24 grayscale opacity-100 hover:opacity-100 transition"
@@ -258,7 +352,7 @@ display=swap" rel="stylesheet">
 </div>
 
 <!--Section2-->
-<section class=" items-center justify-around border border-solid p-5 mb-4 ml-7 mr-7 rounded-md grid gap-7 md:flex">
+<section class="reveal opacity-0 translate-y-16 transition-all duration-700 ease-out overflow-hidden items-center justify-around border border-solid p-5 mb-4 ml-7 mr-7 rounded-md grid gap-7 md:flex">
   <div class="justify-items-center border-b-2 pb-4 lg:border-b-0">
     <h1 class="text-3xl font-montserrat font-semibold">99k</h1>
     <p class="text-xs text-gray-600">People have joined</p>
@@ -274,7 +368,7 @@ display=swap" rel="stylesheet">
 </section>
 
 <!--article1-->
-<article class="mt-5 justify-center mb-10 lg:grid grid-cols-2 flex-row-reverse">
+<article class="reveal opacity-0 translate-y-16 transition-all duration-700 ease-out mt-5 justify-center mb-10 lg:grid grid-cols-2">
   <div class="justify-items-center">
     <img src="IMAGES/packof iphones.png" class="w-[70%]">
   </div>
@@ -305,6 +399,125 @@ display=swap" rel="stylesheet">
     </div>
   </div>
 </article>
+
+<!--Section3-->
+<section class="reveal opacity-0 translate-y-16 transition-all duration-700 ease-out bg-indigo-100 justify-center pl-10 pr-10 pb-10 pt-6 overflow-hidden lg:grid grid-cols-2 gap-6">
+<div class="bg-blue-950 w-[90%] mb-10 p-4 rounded-3xl justify-self-center">
+<img src="IMAGES/Second.png" class="w-[100%] rounded-3xl">
+<h1 class="text-white mt-8 text-2xl font-montserrat font-semibold">Create portfolio today</h1>
+<p class=" mt-3 text-xs text-slate-400 font-montserrat">Buy and sell popular digital currencies,keep track of them in the one place. Has a variety of features that make it the best place to start trading</p>
+</div>
+<div class="w-full">
+  <div class="bg-yellow-300 w-full flex p-4 gap-3 rounded-lg">
+    <img src="IMAGES/lighting.png" loading="lazy" class="rounded-md w-32 h-40">
+    <div>
+      <h2 class="text-2xl font-montserrat font-semibold">Ligthing-Fast Crypto Trading</h2>
+      <p class="text-xs font-spacemono">The Exchange supports USD,EUR, and GBP.Invest in cryptocurrency slowly over time by scheduling buys daily, weekly, or monthly</p>
+    </div>
+  </div>
+    <div class="bg-pink-300 w-full flex p-4 gap-3 rounded-lg mt-2 lg:mt-16">
+    <img src="IMAGES/securure.png" loading="lazy" class="rounded-md w-32 h-40">
+    <div> 
+      <h2 class="text-2xl font-montserrat font-semibold">Security From Day One</h2> 
+      <p class="text-xs font-montserrat">Safefty,security and compliance.Buy and sell popular digital currencies, keep track of them in one place </p>
+    </div>
+  </div>
+</div>
+</section>
+
+ <section class="reveal opacity-0 translate-y-16 transition-all duration-500 ease-out bg-indigo-100 justify-center pl-10 pr-10 mb-10 pb-10 overflow-hidden">
+  <h1 class="justify-self-center text-3xl font-bold font-montserrat">Get Started in Just <br> <span class="pl-10">Few Minutes</span></h1>
+  <p class="mt-4 justify-self-center text-xs font-montserrat text-gray-700">Has  variety of features that make it the best place to start trading </p>
+
+  <div class="mt-9 md:grid grid-cols-3 gap-3">
+   <div class="bg-slate-50 rounded-2xl justify-items-center p-6 pb-10 mt-4 ">
+    <img src="IMAGES/Frame 219.png" loading="lazy" class="">
+    <h2 class="font-bold font-montserrat">Sign Up</h2>
+    <p class="mt-4 justify-self-center text-xs font-montserrat text-gray-700">Buy Bitcoin or Ethereum, the securely store it in your wallet or send it on easily to friends</p>
+   </div> 
+    <div class="bg-slate-50 rounded-2xl justify-items-center p-6 pb-10 mt-4">
+    <img src="IMAGES/Frame 220.png" loading="lazy" class="">
+    <h2 class="font-bold font-montserrat">Fund</h2>
+    <p class="mt-4 justify-self-center text-xs font-montserrat text-gray-700">Choose your preferred payment method such as bank transfer or credit card to top up your wallet</p>
+   </div> 
+    <div class="bg-slate-50 rounded-2xl justify-items-center p-6 pb-10 mt-4 ">
+    <img src="IMAGES/Frame 221.png" loading="lazy" class="">
+    <h2 class="font-bold font-montserrat">Buy Crypto</h2>
+    <p class="mt-4 justify-self-center text-xs font-montserrat text-gray-700">Sign up for free wallet on web, IOS or Andriod and follow our easy process to set up your profile </p>
+   </div> 
+  </div>
+</section>
+
+<article class="reveal opacity-0 translate-y-16 transition-all duration-700 ease-out justify-items-center overflow-hidden">
+  <h1 class="text-3xl mb-4 font-bold font-montserrat">What people are saying</h1>
+  <img src="IMAGES/reviews.png" loading="lazy" class="justify-self-center">
+  <img src="IMAGES/get stared.png" loading="lazy" class="mt-10 rounded-lg">
+</article>
+
+<!--Footer-->
+<footer class=" overflow-hidden bg-blue-700 font-montserrat text-xs rounded-xl p-6 mt-14 gap-10 justify-center ">
+  <div class="grid grid-cols-3 lg:flex gap-4 justify-around">
+  <div class=" text-gray-300 font-extralight" >
+    <p class="font-bold text-white">Company</p>
+    <p>About Us</p>
+    <p>Blog</p>
+    <p>Careers</p>
+    <p>Student</p>
+    <p>Security</p>
+    <p>Trust and Safefty</p>
+    <p>Newsroom</p>
+    <p>Videos</p>
+  </div>
+   <div class=" text-gray-300 font-extralight" >
+    <p class="font-bold text-white">Learn</p>
+    <p>What's Trending</p>
+    <p>Product News</p>
+    <p>Events</p>
+    <p>University</p>
+    <p>Research</p>
+    <p>Market Updates</p>
+  </div>
+   <div class=" text-gray-300 font-extralight" >
+    <p class="font-bold text-white">Products</p>
+    <p>Stock & Fund</p>
+    <p>Cash Card</p>
+    <p>Crypto</p>
+    <p>Options</p>
+    <p>Gold</p>
+    <p>Learn Snacks</p>
+  </div>
+   <div class=" text-gray-300 font-extralight" >
+    <p class="font-bold text-white">Support</p>
+    <p>Support Center</p>
+    <p>Contact Us</p>
+    <p>System Status</p>
+    <p>Areas of Avaliabity</p>
+  </div>
+   <div class=" text-gray-300 font-extralight" >
+    <p class="font-bold text-white">Resources</p>
+    <p>Prices</p>
+    <p>Site Widgets</p>
+    <p>Tax</p>
+    <p>Support</p>
+    <p>Security</p>
+  </div>
+  </div>
+
+  <br><br>
+  <hr>
+  <h2 class="font-montserrat justify-self-center text-lg mt-10 text-white">Did you know you can do more with crypto while on the go?</h2>
+  <div class="flex justify-center gap-6 mt-8">
+    <img src="IMAGES/vuesax/bold/nexo-(nexo).png">
+    <img src="IMAGES/CryptoZ.png">
+  </div>
+  <div class="flex text-gray-300 text-xs justify-center mt-6">
+  &copy;
+  <p>Design by William Justice. All rigths reserved</p>
+  </div>
+  
+</footer>
+
+
  </main>
  <script src="index.js"></script>
   </body>
