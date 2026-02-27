@@ -554,20 +554,16 @@ video {
   display: none;
 }
 
-.relative {
-  position: relative;
-}
-
 .sticky {
   position: sticky;
 }
 
-.top-10 {
-  top: 2.5rem;
-}
-
 .top-0 {
   top: 0px;
+}
+
+.top-10 {
+  top: 2.5rem;
 }
 
 .z-50 {
@@ -586,20 +582,20 @@ video {
   margin-bottom: 1rem;
 }
 
-.ml-1 {
-  margin-left: 0.25rem;
+.ml-5 {
+  margin-left: 1.25rem;
 }
 
 .ml-7 {
   margin-left: 1.75rem;
 }
 
-.mr-7 {
-  margin-right: 1.75rem;
+.mr-5 {
+  margin-right: 1.25rem;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
+.mr-7 {
+  margin-right: 1.75rem;
 }
 
 .mt-10 {
@@ -658,10 +654,6 @@ video {
   height: 10rem;
 }
 
-.h-5 {
-  height: 1.25rem;
-}
-
 .h-auto {
   height: auto;
 }
@@ -676,10 +668,6 @@ video {
 
 .w-5 {
   width: 1.25rem;
-}
-
-.w-64 {
-  width: 16rem;
 }
 
 .w-\[100\%\] {
@@ -710,22 +698,8 @@ video {
   flex-shrink: 1;
 }
 
-.shrink {
-  flex-shrink: 1;
-}
-
 .translate-y-16 {
   --tw-translate-y: 4rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-16 {
-  --tw-translate-x: 4rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-10 {
-  --tw-translate-x: 2.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -825,10 +799,6 @@ video {
   border-radius: 0.75rem;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .border {
   border-width: 1px;
 }
@@ -842,16 +812,6 @@ video {
   border-bottom-width: 2px;
 }
 
-.border-x-2 {
-  border-left-width: 2px;
-  border-right-width: 2px;
-}
-
-.border-x-0 {
-  border-left-width: 0px;
-  border-right-width: 0px;
-}
-
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -862,16 +822,6 @@ video {
 
 .border-solid {
   border-style: solid;
-}
-
-.border-none {
-  border-style: none;
-}
-
-.border-x-zinc-900 {
-  --tw-border-opacity: 1;
-  border-left-color: rgb(24 24 27 / var(--tw-border-opacity, 1));
-  border-right-color: rgb(24 24 27 / var(--tw-border-opacity, 1));
 }
 
 .bg-blue-500 {
@@ -1026,10 +976,6 @@ video {
   font-family: Inter, sans-serif;
 }
 
-.font-jetmono {
-  font-family: JetBrains Mono, monospace;
-}
-
 .font-manrope {
   font-family: Manrope, sans-serif;
 }
@@ -1126,11 +1072,6 @@ video {
   color: rgb(226 232 240 / var(--tw-text-opacity, 1));
 }
 
-.text-slate-300 {
-  --tw-text-opacity: 1;
-  color: rgb(203 213 225 / var(--tw-text-opacity, 1));
-}
-
 .text-slate-400 {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity, 1));
@@ -1141,8 +1082,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.decoration-white {
-  text-decoration-color: #fff;
+.opacity-0 {
+  opacity: 0;
 }
 
 .opacity-100 {
@@ -1159,16 +1100,6 @@ video {
 
 .opacity-55 {
   opacity: 0.55;
-}
-
-.opacity-0 {
-  opacity: 0;
-}
-
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-md {
@@ -1199,12 +1130,12 @@ video {
   transition-duration: 150ms;
 }
 
-.duration-700 {
-  transition-duration: 700ms;
-}
-
 .duration-500 {
   transition-duration: 500ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 .ease-out {
@@ -1214,11 +1145,6 @@ video {
 .hover\:bg-blue-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(147 197 253 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:bg-gray-100:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-blue-600:hover {
@@ -1238,10 +1164,6 @@ video {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.active\:border-none:active {
-  border-style: none;
 }
 
 .active\:bg-blue-100:active {
