@@ -4,9 +4,9 @@
   "description": "",
   "main": "postcss.config.js",
   "scripts": {
- "build": "node node_modules/postcss-cli/bin/postcss input.css -o output.css",
-  "watch": "postcss input.css -o output.css --watch"
-},
+    "build": "node node_modules/postcss-cli/bin/postcss input.css -o output.css",
+    "watch": "postcss input.css -o output.css --watch"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
